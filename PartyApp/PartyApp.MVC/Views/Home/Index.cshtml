@@ -1,0 +1,14 @@
+﻿@model List<InvitationViewModal>
+@{
+
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @foreach (var i in Model)
+    {
+        <div>
+            <a asp-controller="Home" asp-action="Join" asp-route="@i.Id" class="btn btn-link">@i.EventName (@i.EventDate)</a>
+        </div>
+    }
+</div>
